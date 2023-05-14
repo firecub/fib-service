@@ -22,8 +22,13 @@ A service for Fibonacci number functions
 
 ## Test
 - Open linux terminal
-- Test the app using `curl`
+- Test the `number` endpoint using `curl`
 
     `curl -v http://localhost:8080/fib/number/10`
 
-- You should see HTTP status 200 (OK) witha response of "55"
+- You should see HTTP status 200 (OK) with a response of "55"
+- Test the `index` endpoint using `curl`
+
+    `curl -v http://localhost:8080/fib/index/55`
+
+- You should see HTTP status 200 (OK) with a response of "10"
