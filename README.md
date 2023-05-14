@@ -32,3 +32,13 @@ A service for Fibonacci number functions
     `curl -v http://localhost:8080/fib/index/55`
 
 - You should see HTTP status 200 (OK) with a response of "10"
+
+## Stop and remove the container
+- Stop the container
+
+   `docker container stop fib`
+ 
+- Remove the container
+ 
+   `docker container rm fib`
+ 
