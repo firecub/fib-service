@@ -8,10 +8,15 @@ import (
 )
 
 func main() {
+    routerGroup := setUpRouterGroup()
+    routerGroup.Run("localhost:8080")
+}
+
+func setUpRouterGroup() *gin.Engine {
     routerGroup := gin.Default()
     routerGroup.GET("/fib/number/:index", getFibonacciNumberWithIndex)
     routerGroup.GET("/fib/index/:number", getFloorIndexOfFibonacciNumber)
-    routerGroup.Run("localhost:8080")
+    return routerGroup
 }
 
 func getFibonacciNumberWithIndex(c *gin.Context) {
