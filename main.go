@@ -9,7 +9,7 @@ import (
 
 func main() {
     routerGroup := setUpRouterGroup()
-    routerGroup.Run("localhost:8080")
+    routerGroup.Run(":8080")
 }
 
 func setUpRouterGroup() *gin.Engine {
